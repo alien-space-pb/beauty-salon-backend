@@ -26,8 +26,8 @@ class User extends Model {
     }
 
     /** Criando e relaçaõ entre a tabela de files e a de User,por causa da coluna avatar_id */
-    static associate(model){
-        this.belongsTo(model.File, { foreignKey: 'avatar_id' } );
+    static associate(models){
+        this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' } );
     }
 
     /** Verificando se a palavra-passe é igula à palavra-passe criptografada */
