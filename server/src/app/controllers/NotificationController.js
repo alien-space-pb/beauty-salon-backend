@@ -4,7 +4,6 @@ import User from '../models/User';
 class NotificationController {
     async index(req, res){
 
-
          /**
      * Check if provider_id is provider
      */
