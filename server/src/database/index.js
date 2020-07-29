@@ -28,7 +28,7 @@ class Database {
 
     mongo(){
         this.mongoConnection = mongoose.connect(
-            'mongodb+srv://gobarber:gobarber@cluster0.u4c12.mongodb.net/dbgobarber?retryWrites=true&w=majority',
+            process.env.MONGO_URL,
             { useNewUrlParser: true, useFindAndModify: true, useUnifiedTopology: true }
         )
     }
